@@ -5,25 +5,25 @@ public class printspiral {
         int toalelements = 0;
         while(toalelements < r*c){
             //TopROw = leftcol to rightcol
-            for (int j = 0; j <= rightcol; j++) {
+            for (int j = 0; j <= rightcol && toalelements < r*c ; j++) {
                 System.out.print(matrix[TopROw][j]+" ");
                 toalelements++;
             }
             TopROw++;
             //RightCol = toprow to bottomrow
-            for (int i = TopROw; i <= bottomrow; i++) {
+            for (int i = TopROw; i <= bottomrow && toalelements < r*c; i++) {
                 System.out.print(matrix[i][rightcol]+" ");
                 toalelements++;
             }
             rightcol--;
             //BottomRow = rightcol to leftcol
-            for (int j = rightcol; j >= leftcol; j--) {
+            for (int j = rightcol; j >= leftcol && toalelements < r*c; j--) {
                 System.out.print(matrix[bottomrow][j]+" ");
                 toalelements++;
             }
             bottomrow--;
             //LeftCol = bottomrow to toprow
-            for (int i= bottomrow; i >TopROw; i--){
+            for (int i= bottomrow; i >TopROw && toalelements < r*c; i--){
                 System.out.print(matrix[i][leftcol]+" ");
                 toalelements++;
             }
